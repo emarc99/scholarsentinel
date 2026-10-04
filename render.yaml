@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: scholarsentinel
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20.17.0
+      - key: PORT
+        value: 3000
+      - key: GEMMA_API_KEY
+        sync: false
+      - key: ELEVENLABS_API_KEY
+        sync: false
+      - key: SERPAPI_API_KEY
+        sync: false
+      - key: MONGODB_URI
+        sync: false
