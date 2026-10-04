@@ -89,7 +89,7 @@ ScholarSentinel was architected to compete across multiple featured and partner 
 
 ### 1. Clone & Install
 ```bash
-git clone https://github.com/your-username/scholarsentinel.git
+git clone https://github.com/emarc99/scholarsentinel.git
 cd scholarsentinel
 npm install
 ```
