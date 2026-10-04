@@ -6,13 +6,13 @@ export const viewport = {
 };
 
 export const metadata = {
-  title: "ScholarSentinel — Autonomous AI Scholarship Watchdog for Emmanuel (FUTA)",
-  description: "Open-source AI scholarship watchdog built for Emmanuel (300L Computer Engineering, FUTA) to monitor test center shortlists, parse messy circulars with Google Gemma, and dispatch urgent ElevenLabs voice alerts and WhatsApp notifications.",
+  title: "ScholarSentinel — Autonomous AI Scholarship Watchdog for Daniel (FUTA)",
+  description: "Open-source AI scholarship watchdog built by Emmanuel for his brother Daniel (300L Computer Engineering, FUTA) to monitor test center shortlists, parse messy circulars with Google Gemma, and dispatch urgent ElevenLabs voice alerts and WhatsApp notifications.",
   keywords: ["hacktoberfest", "hacktoberfest2026", "gemma", "elevenlabs", "render", "serpapi", "mongodb-atlas", "devchallenge", "weekendchallenge", "hf26challenge"],
-  authors: [{ name: "Antigravity Builder for Emmanuel" }],
+  authors: [{ name: "Emmanuel Aroso" }],
   openGraph: {
     title: "ScholarSentinel — Autonomous AI Scholarship Watchdog",
-    description: "Built for Emmanuel (FUTA Computer Engineering) to eliminate silent missed scholarship exam dates.",
+    description: "Built by Emmanuel for his brother Daniel (FUTA Computer Engineering) to eliminate silent missed scholarship exam dates.",
     type: "website",
   }
 };
