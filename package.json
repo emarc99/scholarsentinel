@@ -1,7 +1,7 @@
 {
   "name": "scholarsentinel",
   "version": "1.0.0",
-  "description": "Autonomous open-source AI scholarship watchdog built for Emmanuel (FUTA Computer Engineering)",
+  "description": "Autonomous open-source AI scholarship watchdog built for Daniel (FUTA Computer Engineering)",
   "main": "server.js",
   "scripts": {
     "dev": "next dev",

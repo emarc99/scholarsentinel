@@ -1,5 +1,5 @@
 # 🛡️ ScholarSentinel — Autonomous AI Scholarship Watchdog
-> **Built for Emmanuel (300L Computer Engineering, Federal University of Technology, Akure - FUTA)**  
+> **Built for my younger brother Daniel (300L Computer Engineering, Federal University of Technology, Akure - FUTA)**  
 > *Official submission for the [Hacktoberfest 2026 Weekend Challenge: Build for a Friend](https://dev.to/challenges/hacktoberfest-weekend-2026-10-01)*
 
 [![Hacktoberfest 2026](https://img.shields.io/badge/Hacktoberfest-2026_Weekend_Challenge-FF6B4A?style=for-the-badge&logo=hacktoberfest&logoColor=white)](https://dev.to/challenges/hacktoberfest-weekend-2026-10-01)
@@ -13,15 +13,15 @@
 
 ## 📖 The Story Behind ScholarSentinel
 
-My younger brother, **Emmanuel**, is a 300-level Computer Engineering student at the **Federal University of Technology, Akure (FUTA)** in Nigeria. Like thousands of determined STEM undergraduates, he applies for major merit-based scholarships (NNPC/TotalEnergies, Chevron JV, MTN Foundation Science & Technology, PTDF, Jim Ovia, Shell).
+My younger brother, **Daniel**, is a 300-level Computer Engineering student at the **Federal University of Technology, Akure (FUTA)** in Nigeria. Like thousands of determined STEM undergraduates, he applies for major merit-based scholarships (NNPC/TotalEnergies, Chevron JV, MTN Foundation Science & Technology, PTDF, Jim Ovia, Shell).
 
-Recently, Emmanuel suffered a devastating blow. He was shortlisted for a prestigious oil & gas scholarship screening test. But in Nigeria, **scholarship boards notoriously do not send candidate invitation emails**. Instead, they quietly upload massive PDF candidate lists or post unformatted bulletin updates on portal announcement pages and student forums (like *Myschool* and *Scholar9ja*). 
+Recently, Daniel suffered a devastating blow. He was shortlisted for a prestigious oil & gas scholarship screening test. But in Nigeria, **scholarship boards notoriously do not send candidate invitation emails**. Instead, they quietly upload massive PDF candidate lists or post unformatted bulletin updates on portal announcement pages and student forums (like *Myschool* and *Scholar9ja*). 
 
-Because no email arrived in his inbox, Emmanuel had no idea he was shortlisted. By the time news reached him through campus word-of-mouth, the computer-based testing (CBT) center session in Akure had already concluded. His seat was forfeited.
+Because no email arrived in his inbox, Daniel had no idea he was shortlisted. By the time news reached him through campus word-of-mouth, the computer-based testing (CBT) center session in Akure had already concluded. His seat was forfeited.
 
 He had the GPA, the technical skills, and the drive to pass with flying colors—but lost a life-changing scholarship purely due to a communication breakdown.
 
-**ScholarSentinel** was engineered specifically so that Emmanuel—and any student like him—**never misses another scholarship screening date again**.
+**ScholarSentinel** was engineered specifically so that Daniel—and any student like him—**never misses another scholarship screening date again**.
 
 ---
 
@@ -33,10 +33,10 @@ ScholarSentinel combines autonomous web intelligence, open-source AI parsing, ve
 graph TD
     A[Educational Boards, Blogs & Portals] -->|Automated Web Crawl| B[SerpApi Web Scout]
     B -->|Raw PDF Tables & Bulletins| C[Google Gemma Open-Source AI Core]
-    P[Emmanuel's Profile & Applied List] --> C
+    P[Daniel's Profile & Applied List] --> C
     
     subgraph "Open AI Intelligence Core (Gemma)"
-        C -->|Candidate Matcher| C1[Match: Emmanuel Adeyemi / FUTA / CPE/21/4892]
+        C -->|Candidate Matcher| C1[Match: Daniel Aroso / FUTA / CPE/21/4892]
         C -->|Entity Extraction| C2[Extract: CBT Date, Venue, Time, Requirements]
         C -->|Action Payload| C3[Generate Structured Action Notice]
     end
@@ -45,7 +45,7 @@ graph TD
     C3 -->|Generate Audio Briefing| E[ElevenLabs Voice Engine]
     C3 -->|Format Emergency Dispatch| F[WhatsApp Alert Service]
     
-    E -->|High-Priority Voice Notice| G[Emmanuel's Phone & Dashboard]
+    E -->|High-Priority Voice Notice| G[Daniel's Phone & Dashboard]
     F -->|Instant Message & Maps Link| G
     
     subgraph "Deployment & Cloud Engine"
@@ -61,7 +61,7 @@ ScholarSentinel was architected to compete across multiple featured and partner 
 
 ### 🌟 1. Best Use of Gemma ($200)
 - **Component:** [`lib/gemma.js`](file:///c:/Users/LENOVO/Documents/web2-3%20hacks/hacktoberfest26/dev-challalenges/weekend-launch/lib/gemma.js) / [`app/api/gemma/route.js`](file:///c:/Users/LENOVO/Documents/web2-3%20hacks/hacktoberfest26/dev-challalenges/weekend-launch/app/api/gemma/route.js)
-- **Role:** Google Gemma open-weight models (Gemma 2 9B instruction-tuned) serve as the central cognitive engine. It parses unstructured circular text, matches Emmanuel's academic credentials (institution, matriculation number, JAMB reg code), extracts CBT test venues (e.g. *FUTA Digital Research Centre*), times, and mandatory items.
+- **Role:** Google Gemma open-weight models (Gemma 2 9B instruction-tuned) serve as the central cognitive engine. It parses unstructured circular text, matches Daniel's academic credentials (institution, matriculation number, JAMB reg code), extracts CBT test venues (e.g. *FUTA Digital Research Centre*), times, and mandatory items.
 - **Why Open Innovation Matters:**
   - **Zero Student Cost:** Nigerian students cannot pay recurring dollar API subscriptions ($1 USD = ~₦1,600). Open-weight Gemma runs for free.
   - **100% Student Data Privacy:** Sensitive academic IDs, NINs, and state-of-origin records are processed in private memory without being harvested for commercial model training.
@@ -81,7 +81,7 @@ ScholarSentinel was architected to compete across multiple featured and partner 
 
 ### 🛠️ 5. Best Use of MongoDB Atlas ($100)
 - **Component:** [`lib/mongo.js`](file:///c:/Users/LENOVO/Documents/web2-3%20hacks/hacktoberfest26/dev-challalenges/weekend-launch/lib/mongo.js) / [`app/api/scholarships/route.js`](file:///c:/Users/LENOVO/Documents/web2-3%20hacks/hacktoberfest26/dev-challalenges/weekend-launch/app/api/scholarships/route.js)
-- **Role:** Document store tracking applied scholarships, Emmanuel's credentials, test center locations, and historical shortlist matching logs.
+- **Role:** Document store tracking applied scholarships, Daniel's credentials, test center locations, and historical shortlist matching logs.
 
 ---
 
@@ -121,4 +121,4 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 ---
 
 ## 📄 License
-MIT License • Created with ❤️ for Emmanuel Adeyemi (FUTA) as part of Hacktoberfest 2026.
+MIT License • Created with ❤️ by Emmanuel for brother Daniel Aroso (FUTA) as part of Hacktoberfest 2026.

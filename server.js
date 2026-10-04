@@ -1,6 +1,6 @@
 /**
  * ScholarSentinel Server
- * Autonomous Open-Source AI Scholarship Watchdog for Emmanuel (FUTA)
+ * Autonomous Open-Source AI Scholarship Watchdog for Daniel (FUTA)
  */
 
 require("dotenv").config();
@@ -8,7 +8,7 @@ const express = require("express");
 const cors = require("cors");
 const path = require("path");
 
-const { emmanuelProfile, sampleCirculars } = require("./lib/data");
+const { danielProfile, sampleCirculars } = require("./lib/data");
 const { searchScholarshipAnnouncements } = require("./lib/serpapi");
 const { parseCircularWithGemma } = require("./lib/gemma");
 const { generateVoiceAlert } = require("./lib/elevenlabs");
@@ -89,7 +89,7 @@ app.post("/api/gemma/parse", async (req, res) => {
 
   await mongo.addLog({
     action: "GEMMA_PARSING_COMPLETED",
-    detail: `Parsed circular: "${parseResult.result.scholarshipTitle}". Match: ${parseResult.result.isShortlisted ? "MATCHED (Emmanuel)" : "NO_MATCH"}`
+    detail: `Parsed circular: "${parseResult.result.scholarshipTitle}". Match: ${parseResult.result.isShortlisted ? "MATCHED (Daniel)" : "NO_MATCH"}`
   });
 
   res.json(parseResult);
@@ -98,7 +98,7 @@ app.post("/api/gemma/parse", async (req, res) => {
 // 6. Generate Voice Alert with ElevenLabs
 app.post("/api/elevenlabs/voice", async (req, res) => {
   const { alertText, voiceId, apiKey } = req.body || {};
-  const defaultText = alertText || `Urgent priority notice for Emmanuel Adeyemi at FUTA. You have been shortlisted for the NNPC TotalEnergies National Merit Scholarship. Your computer-based screening test is scheduled for Saturday, October 10th at 8:00 AM at the FUTA Digital Research Centre. Accreditation closes at 7:30 AM. Bring your original FUTA Student ID Card, printed invitation slip, and JAMB admission letter. Good luck!`;
+  const defaultText = alertText || `Urgent priority notice for Daniel Aroso at FUTA. You have been shortlisted for the NNPC TotalEnergies National Merit Scholarship. Your computer-based screening test is scheduled for Saturday, October 10th at 8:00 AM at the FUTA Digital Research Centre. Accreditation closes at 7:30 AM. Bring your original FUTA Student ID Card, printed invitation slip, and JAMB admission letter. Good luck!`;
 
   const voiceResult = await generateVoiceAlert(defaultText, voiceId, apiKey);
   await mongo.addLog({
@@ -137,7 +137,7 @@ app.post("/api/whatsapp/dispatch", async (req, res) => {
   const dispatch = formatWhatsAppAlert(scholarship, profile);
   await mongo.addLog({
     action: "WHATSAPP_DISPATCHED",
-    detail: `Dispatched high-priority alert for ${scholarship.title} to Emmanuel's WhatsApp`
+    detail: `Dispatched high-priority alert for ${scholarship.title} to Daniel's WhatsApp`
   });
   res.json({ success: true, dispatch });
 });

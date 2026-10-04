@@ -21,7 +21,7 @@ export default function Home() {
 
   // ElevenLabs state
   const [voiceScript, setVoiceScript] = useState(
-    "Urgent priority notice for Emmanuel Adeyemi at FUTA. You have been shortlisted for the NNPC TotalEnergies National Merit Scholarship! Your computer-based screening test is scheduled for Saturday, October 10th at 8:00 AM at the FUTA Digital Research Centre. Accreditation closes at 7:30 AM. Bring your original FUTA Student ID Card, printed invitation slip, and JAMB admission letter. Good luck!"
+    "Urgent priority notice for Daniel Aroso at FUTA. You have been shortlisted for the NNPC TotalEnergies National Merit Scholarship! Your computer-based screening test is scheduled for Saturday, October 10th at 8:00 AM at the FUTA Digital Research Centre. Accreditation closes at 7:30 AM. Bring your original FUTA Student ID Card, printed invitation slip, and JAMB admission letter. Good luck!"
   );
   const [selectedVoice, setSelectedVoice] = useState("21m00Tcm4TlvDq8ikWAM");
   const [voiceLoading, setVoiceLoading] = useState(false);
@@ -111,7 +111,7 @@ export default function Home() {
         if (data.result.isShortlisted) {
           // Update WhatsApp message and voice script
           setVoiceScript(
-            `Urgent alert for Emmanuel Adeyemi at FUTA! You have been shortlisted for ${data.result.scholarshipTitle}. Screening test is on ${data.result.examDate} at ${data.result.examVenue}. Arrival time is ${data.result.examTime}. Please bring all required documents.`
+            `Urgent alert for Daniel Aroso at FUTA! You have been shortlisted for ${data.result.scholarshipTitle}. Screening test is on ${data.result.examDate} at ${data.result.examVenue}. Arrival time is ${data.result.examTime}. Please bring all required documents.`
           );
           // Refresh scholarships list
           const refreshed = await fetch("/api/scholarships").then(r => r.json());
@@ -213,7 +213,7 @@ export default function Home() {
 
   // Trigger Voice from Scholarship Card
   function handleVoiceForScholarship(sch) {
-    const text = `Urgent notice for Emmanuel Adeyemi. You are shortlisted for ${sch.title}. Screening is on ${sch.examDate || 'upcoming date'} at ${sch.examVenue || 'FUTA Campus'}. Do not miss this screening!`;
+    const text = `Urgent notice for Daniel Aroso. You are shortlisted for ${sch.title}. Screening is on ${sch.examDate || 'upcoming date'} at ${sch.examVenue || 'FUTA Campus'}. Do not miss this screening!`;
     setVoiceScript(text);
     setActiveTab("elevenlabs");
   }
@@ -245,32 +245,32 @@ export default function Home() {
                 ScholarSentinel <span className="badge-hf">Hacktoberfest 2026</span>
               </div>
               <div className="brand-subtitle">
-                Autonomous Open-Source AI Watchdog • Built for Emmanuel (FUTA)
+                Autonomous Open-Source AI Watchdog • Built for Daniel (FUTA)
               </div>
             </div>
           </div>
 
-          {/* Partner Tech HUD Badges */}
+          {/* Active Partner Tech Status HUD */}
           <div className="partner-hud">
             <div className="hud-item" title="Core Intelligence: Google Gemma Open-Weights">
               <span className="hud-dot"></span>
-              <span>Gemma 2 ($200)</span>
+              <span>Gemma 2 AI</span>
             </div>
             <div className="hud-item" title="Web Scout: SerpApi Educational Feeds">
               <span className="hud-dot"></span>
-              <span>SerpApi ($100)</span>
+              <span>SerpApi Scout</span>
             </div>
             <div className="hud-item" title="Database: MongoDB Atlas Vector State">
               <span className="hud-dot"></span>
-              <span>MongoDB ($100)</span>
+              <span>MongoDB Atlas</span>
             </div>
             <div className="hud-item" title="Audio Core: ElevenLabs Emergency Voice Briefings">
               <span className="hud-dot"></span>
-              <span>ElevenLabs ($100)</span>
+              <span>ElevenLabs Voice</span>
             </div>
             <div className="hud-item" title="Deployment: Render Cloud Engine">
               <span className="hud-dot"></span>
-              <span>Render ($200)</span>
+              <span>Render Cloud</span>
             </div>
           </div>
         </div>
@@ -282,15 +282,15 @@ export default function Home() {
           <div className="student-card">
             <div className="student-avatar">👨🏾‍💻</div>
             <div className="student-meta">
-              <div className="student-badge">Target Beneficiary</div>
-              <h2>Emmanuel Adeyemi</h2>
+              <div className="student-badge">Target Beneficiary: Brother</div>
+              <h2>Daniel Aroso</h2>
               <p className="student-detail">
                 <span>🏫 <strong>FUTA</strong> (Federal University of Technology, Akure)</span> •{" "}
                 <span>⚙️ <strong>300L</strong> Computer Engineering</span> •{" "}
                 <span>🆔 Matric: <code>CPE/21/4892</code></span>
               </p>
               <div className="mission-tag">
-                🎯 <strong>Mission:</strong> Eliminate silent missed test screenings. While scholarship boards fail to email candidates, <strong>Gemma</strong> parses announcement circulars, <strong>MongoDB Atlas</strong> persists state, and the watchdog wakes Emmanuel via <strong>ElevenLabs voice alerts</strong> & <strong>WhatsApp dispatches</strong>.
+                🎯 <strong>Mission:</strong> Eliminate silent missed test screenings. While scholarship boards fail to email candidates, <strong>Gemma</strong> parses announcement circulars, <strong>MongoDB Atlas</strong> persists state, and the watchdog wakes Daniel via <strong>ElevenLabs voice alerts</strong> & <strong>WhatsApp dispatches</strong>.
               </div>
             </div>
           </div>
@@ -367,7 +367,7 @@ export default function Home() {
             <div className="section-header">
               <div>
                 <h3>Tracked Scholarship Applications</h3>
-                <p className="section-desc">Active monitoring board for Emmanuel's high-stakes Nigerian engineering scholarships.</p>
+                <p className="section-desc">Active monitoring board for Daniel's high-stakes Nigerian engineering scholarships.</p>
               </div>
               <button
                 className="btn btn-primary"
@@ -482,7 +482,7 @@ export default function Home() {
                       checked={autoUpdate}
                       onChange={e => setAutoUpdate(e.target.checked)}
                     />
-                    <span>Auto-update Emmanuel's profile if candidate matched</span>
+                    <span>Auto-update Daniel's profile if candidate matched</span>
                   </label>
                   <button
                     className="btn btn-primary"
@@ -517,7 +517,7 @@ export default function Home() {
                           <div className="match-title">{gemmaResult.scholarshipTitle}</div>
                           <div className="match-subtitle">
                             {gemmaResult.isShortlisted
-                              ? "CRITICAL ALERT: Emmanuel Adeyemi is SHORTLISTED!"
+                              ? "CRITICAL ALERT: Daniel Aroso is SHORTLISTED!"
                               : "No candidate match in this circular batch."}
                           </div>
                         </div>
@@ -561,14 +561,14 @@ export default function Home() {
                             setActiveTab("whatsapp");
                           }}
                         >
-                          💬 Send Verified Alert to Emmanuel
+                          💬 Send Verified Alert to Daniel
                         </button>
                       </div>
                     </div>
                   ) : (
                     <div className="empty-state">
                       <div className="empty-icon">📄</div>
-                      <p>Click "Run Gemma Analysis" to parse the circular with Google Gemma open-weights and match against Emmanuel's credentials.</p>
+                      <p>Click "Run Gemma Analysis" to parse the circular with Google Gemma open-weights and match against Daniel's credentials.</p>
                     </div>
                   )}
                 </div>
@@ -634,7 +634,7 @@ export default function Home() {
             <div className="eleven-studio-grid">
               <div className="panel voice-controls-panel">
                 <h4>Urgent Spoken Dispatch Script</h4>
-                <p className="panel-caption">This audio notice is generated and sent directly to Emmanuel when a shortlist screening date is confirmed.</p>
+                <p className="panel-caption">This audio notice is generated and sent directly to Daniel when a shortlist screening date is confirmed.</p>
                 <textarea
                   rows={6}
                   value={voiceScript}
@@ -695,10 +695,10 @@ export default function Home() {
             <div className="section-header">
               <div>
                 <h3>WhatsApp Instant Alert Dispatcher</h3>
-                <p className="section-desc">Emmanuel lives on WhatsApp. The second Gemma confirms his shortlist match, an actionable dispatch is prepared.</p>
+                <p className="section-desc">Daniel lives on WhatsApp. The second Gemma confirms his shortlist match, an actionable dispatch is prepared.</p>
               </div>
               <div className="gemma-badge">
-                <span>Recipient: <strong>Emmanuel (+234 812 345 6789)</strong></span>
+                <span>Recipient: <strong>Daniel (+234 812 345 6789)</strong></span>
               </div>
             </div>
 
@@ -732,7 +732,7 @@ export default function Home() {
               <div className="whatsapp-actions-panel">
                 <div className="panel">
                   <h4>Live Dispatch Actions</h4>
-                  <p>Because scholarship boards refuse to send reminder emails, this automated message delivers the exact date, venue coordinates, and document checklist directly to Emmanuel's WhatsApp.</p>
+                  <p>Because scholarship boards refuse to send reminder emails, this automated message delivers the exact date, venue coordinates, and document checklist directly to Daniel's WhatsApp.</p>
 
                   <div className="action-buttons-stack">
                     <a
@@ -784,7 +784,7 @@ export default function Home() {
 
             <div className="architecture-content">
               <div className="panel essay-panel">
-                <h4>Why Open Innovation Matters for Emmanuel</h4>
+                <h4>Why Open Innovation Matters for Daniel</h4>
                 <p className="essay-lede">
                   <em>"Why not just build this on a closed commercial AI API?"</em> Here is why open-source AI and Google Gemma are genuinely non-negotiable for this project:
                 </p>
@@ -793,7 +793,7 @@ export default function Home() {
                   <div className="essay-card">
                     <div className="card-icon">🔒</div>
                     <h5>1. Strict Student Data Privacy</h5>
-                    <p>Undergraduate scholarship screening lists contain sensitive personally identifiable information: Emmanuel's student matric number, JAMB registration code, National Identification Number (NIN), state of origin, and LGA. Running open-weights locally or in a private zero-retention runtime guarantees his credentials never enter third-party commercial training pools.</p>
+                    <p>Undergraduate scholarship screening lists contain sensitive personally identifiable information: Daniel's student matric number, JAMB registration code, National Identification Number (NIN), state of origin, and LGA. Running open-weights locally or in a private zero-retention runtime guarantees his credentials never enter third-party commercial training pools.</p>
                   </div>
 
                   <div className="essay-card">
@@ -811,7 +811,7 @@ export default function Home() {
                   <div className="essay-card">
                     <div className="card-icon">🧩</div>
                     <h5>4. Custom Agent Tuning & Independence</h5>
-                    <p>Closed APIs deprecate models, enforce strict token throttling, and alter system prompts arbitrarily. With Gemma, the prompt engineering, table parser format, and entity extraction logic belong entirely to the developer and Emmanuel.</p>
+                    <p>Closed APIs deprecate models, enforce strict token throttling, and alter system prompts arbitrarily. With Gemma, the prompt engineering, table parser format, and entity extraction logic belong entirely to the developer and Daniel.</p>
                   </div>
                 </div>
 
@@ -822,7 +822,7 @@ export default function Home() {
                       <tr>
                         <th>Partner Track</th>
                         <th>Component</th>
-                        <th>Role in Emmanuel's Watchdog</th>
+                        <th>Role in Daniel's Watchdog</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -940,7 +940,7 @@ export default function Home() {
 
       <footer className="app-footer">
         <div className="footer-container">
-          <p>Built with ❤️ for <strong>Emmanuel Adeyemi (FUTA)</strong> • Hacktoberfest 2026 Weekend Challenge ("Build for a Friend")</p>
+          <p>Built with ❤️ by Emmanuel for brother <strong>Daniel Aroso (FUTA)</strong> • Hacktoberfest 2026 Weekend Challenge ("Build for a Friend")</p>
           <p className="footer-tags">
             Tags: <code>#devchallenge</code> • <code>#weekendchallenge</code> • <code>#hf26challenge</code>
           </p>
